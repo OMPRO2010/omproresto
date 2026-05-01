@@ -1,81 +1,85 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Om Pro's Resto | Pure Veg Restaurant Pune</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Om Pro's Resto</title>
 
 <style>
 body{
-  font-family:Poppins, Arial;
+  font-family: Arial;
   margin:0;
-  background:#FFF8F2;
+  background:#fff8f0;
   text-align:center;
 }
+
+header{
+  background:#ff5733;
+  color:white;
+  padding:20px;
+}
+
+nav a{
+  margin:15px;
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+}
+
 .hero{
-  background:url("images/hero.jpg");
-  background-size:cover;
-  color:white;
-  padding:120px 20px;
-}
-button{
-  padding:12px 20px;
-  margin:10px;
-  background:#FF7A00;
-  color:white;
-  border:none;
-  font-size:18px;
-  cursor:pointer;
-}
-.menu{
   padding:40px;
 }
-.item{
-  display:inline-block;
-  width:250px;
-  margin:20px;
-  background:white;
-  padding:15px;
-  border-radius:10px;
+
+.btn{
+  background:#28a745;
+  color:white;
+  padding:12px 20px;
+  text-decoration:none;
+  border-radius:5px;
+  font-size:18px;
 }
-.item img{
-  width:100%;
+
+.food img{
+  width:250px;
   border-radius:10px;
+  margin:10px;
+}
+
+footer{
+  background:#333;
+  color:white;
+  padding:15px;
+  margin-top:40px;
 }
 </style>
 </head>
 
 <body>
 
+<header>
+  <h1>Om Pro's Resto 🍽️</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="order.html">Order Online</a>
+    <a href="booking.html">Book Table</a>
+  </nav>
+</header>
+
 <div class="hero">
-<h1>🌿 Om Pro's Resto</h1>
-<h2>Fresh • Veg • Made With Love</h2>
-
-<a href="order.html"><button>Order Online</button></a>
-<a href="reservation.html"><button>Book Table</button></a>
+  <h2>Pure Veg Cafe & Family Restaurant in Pune 🌿</h2>
+  <p>All Vibes • Dine-In • Takeaway • Delivery</p>
+  <a class="btn" href="order.html">Order Now</a>
 </div>
 
-<div class="menu">
-<h2>Our Popular Dishes 🍽️</h2>
+<h2>Our Special Dishes</h2>
 
-<div class="item">
-<img src="images/paneer.jpg">
-<h3>Paneer Butter Masala</h3>
+<div class="food">
+  <img src="images/paneer.jpg">
+  <img src="images/biryani.jpg">
+  <img src="images/naan.jpg">
 </div>
 
-<div class="item">
-<img src="images/biryani.jpg">
-<h3>Veg Biryani</h3>
-</div>
-
-<div class="item">
-<img src="images/naan.jpg">
-<h3>Butter Naan</h3>
-</div>
-
-</div>
-
-<h2>Visit Our Restaurant 📍</h2>
-<img src="images/interior.jpg" width="80%">
+<footer>
+  📍 Pune | Pure Veg Only | Open Daily
+</footer>
 
 </body>
 </html>
