@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Checkout</title>
+</head>
+<body>
+
+<h1>Checkout</h1>
+
+<input id="name" placeholder="Your Name"><br><br>
+<input id="phone" placeholder="Phone Number"><br><br>
+<input id="address" placeholder="Delivery Address"><br><br>
+
+<button onclick="placeOrder()">Place Order</button>
+
+<script>
+function placeOrder() {
+
+  let name = document.getElementById("name").value;
+  let phone = document.getElementById("phone").value;
+  let address = document.getElementById("address").value;
+
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let total = 0;
+  let items = "";
+
+  cart.forEach(item => {
+    total += item.price;
+    items += item.name + " - ₹" + item.price + "%0A";
+  });
+
+  let message =
+  "🛒 NEW ORDER%0A%0A" +
+  "Name: " + name + "%0A" +
+  "Phone: " + phone + "%0A" +
+  "Address: " + address + "%0A%0A" +
+  "Items:%0A" + items +
+  "%0ATotal: ₹" + total;
+
+  // 👉 Replace with your WhatsApp number (country code + number)
+  let whatsappNumber = "91 8149145626";
+
+  let url = "https://wa.me/" + whatsappNumber + "?text=" + message;
+
+  window.open(url, "_blank");
+
+  // Redirect to payment page
+  window.location.href = "payment.html";
+}
+</script>
+
+</body>
+</html>

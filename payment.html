@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payment</title>
+</head>
+<body style="text-align:center">
+
+<h1>Pay via UPI</h1>
+<h2>Scan & Pay</h2>
+
+<img src="upi-qr.png" width="250">
+
+<p>After payment, send screenshot on WhatsApp 👍</p>
+
+<button onclick="finish()">I Have Paid</button>
+
+<script>
+function finish(){
+  localStorage.removeItem("cart");
+  window.location.href="success.html";
+}
+</script>
+
+</body>
+</html>
